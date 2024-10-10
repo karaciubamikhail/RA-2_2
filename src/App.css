@@ -70,7 +70,11 @@
   display: flex;
   flex-direction: column;
 }
-.card{
+.cards1 .card{
+  display: flex;
+  flex-direction: row;
+}
+.cards .card{
   display: flex;
   flex-direction: column;
 }

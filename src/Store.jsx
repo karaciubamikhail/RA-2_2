@@ -1,6 +1,7 @@
 import './App.css';
 import { IconSwitch } from './IconSwitch';
-import {CardsView} from './CardsView';
+import { ListView } from './ListView';
+import { CardsView } from './CardView';
 import { useState } from 'react';
 
 const products = [{
@@ -43,9 +44,7 @@ export function Store (){
     return (
         <div className='container'>
           <IconSwitch icon={viewState ? 'view_module' : 'view_list'} onSwitch={swith}/>
-          <div className={viewState ? "cards1":"cards"}>
-            <CardsView data = {products}/>
-          </div>
+          {viewState? <CardsView data = {products}/>:<ListView data = {products}/>}
         </div>
       );
 }

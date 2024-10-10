@@ -1,7 +1,7 @@
-export function CardsView (datas){
-    const data = datas.data.map((el)=>{
+export function ShopCard (datas){
+    const data = datas.data.data.map((el,id)=>{
         return(
-        <div className="card">
+        <div className="card" key={id}>
             {el.name}
             {el.color}
             <img className='card_img' src={el.img}/>
